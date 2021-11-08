@@ -30,11 +30,31 @@
         }
      }
 
-     if (isset($_GET['numero'])) {
-        tabla($_GET['numero']);
-     } else {
-        echo "No hay número para sacar la tabla";
-     }
+   //   if (isset($_GET['numero'])) {
+   //      tabla($_GET['numero']);
+   //   } else {
+   //      echo "No hay número para sacar la tabla";
+   //   }
+
+
+   // Ejemplo 3
+   function calculadora($numero1, $numero2) {
+      // Conjunto de instrucciones a ejecutar
+      $suma = $numero1 + $numero2;
+      $resta = $numero1 - $numero2;
+      $multi = $numero1 * $numero2;
+      $division = $numero1 / $numero2;
+
+      echo "Suma: $suma <br>";
+      echo "Resta: $resta <br>";
+      echo "Multiplicación: $multi <br>";
+      echo "División: $division <br>";
+      echo "<hr/>";
+   }
+
+   calculadora(10, 30);
+   calculadora(5, 56);
+   calculadora(6, 12);
 
 
 ?>
