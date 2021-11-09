@@ -39,31 +39,41 @@
 
    // Ejemplo 3
    function calculadora($numero1, $numero2, $negrita = false) {
+
       // Conjunto de instrucciones a ejecutar
       $suma = $numero1 + $numero2;
       $resta = $numero1 - $numero2;
       $multi = $numero1 * $numero2;
       $division = $numero1 / $numero2;
 
+      $cadena_texto = "";
+
       if($negrita) {
-         echo "<h1>";
+         $cadena_texto .= "<h1>";
       }
 
-      echo "Suma: $suma <br>";
-      echo "Resta: $resta <br>";
-      echo "Multiplicación: $multi <br>";
-      echo "División: $division <br>";
+      $cadena_texto .=  "Suma: $suma <br>";
+      $cadena_texto .=  "Resta: $resta <br>";
+      $cadena_texto .=  "Multiplicación: $multi <br>";
+      $cadena_texto .=  "División: $division <br>";
 
       if($negrita) {
-         echo "</h1>";
+         $cadena_texto .= "</h1>";
       }
       
-      echo "<hr/>";
+      $cadena_texto .= "<hr/>";
+
+      return $cadena_texto;
    }
 
-   calculadora(10, 30, true);
-   calculadora(5, 56, true);
-   calculadora(6, 12, false);
+   echo calculadora(10, 30, true);
+
+   // Ejemplo 4
+   function devuelveNombre($nombre) {
+      return "El nombre es: $nombre";
+   }
+
+   echo devuelveNombre('Angel Travieso');
 
 
 ?>
