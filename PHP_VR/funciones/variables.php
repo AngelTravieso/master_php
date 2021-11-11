@@ -28,4 +28,23 @@
 
      echo holaMundo();
 
+     echo "<br>";
+
+     // Funciones variables (parecido al function expression)
+     function buenosDias() {
+        return "<h1>Hola! Buenos Dias :)</h1>";
+     }
+
+     function buenasTardes() {
+        return "<h1>Hey!! Que tal ha ido la comida??</h1>";
+     }
+
+     function buenasNoches() {
+        return "<h1>Te vas a dormir ya? Buenas noches!!</h1>";
+     }
+
+     $horario = "Tardes";
+     $funcion =  "buenas" . $horario;
+     echo $funcion();
+
 ?>
