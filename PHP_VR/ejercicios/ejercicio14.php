@@ -53,7 +53,13 @@
 		<input type="submit" name="dividir" value="División">
 	</form>
 
-	<?= "<h2>El resultado de la operación es: $resultado</h2>" ?>
+	<?php 
+
+		if(isset($resultado)) {
+			echo "<h2>El resultado de la operación es: $resultado</h2>";
+		}
+
+	?>
 	
 </body>
 </html>
